@@ -115,6 +115,18 @@ object function {
     computer(3, 8, factory("-"))
 
     println("--------9.柯里化---------")
+    def fun09(a: Int)(b: Int)(c: String): Unit = {
+      println(s"$a\t$b\t$c")
+    }
+
+    fun09(3)(8)("sdfsdf")
+
+    def fun10(a: Int*)(b: String*): Unit = {
+      a.foreach(println)
+      b.foreach(println)
+    }
+
+    fun10(1, 2, 3)("sdfs", "sss")
 
   }
 }
